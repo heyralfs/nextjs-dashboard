@@ -1,6 +1,54 @@
-import Head from "next/head";
-import Image from "next/image";
+import { Button, Flex, Input, FormLabel, FormControl } from "@chakra-ui/react";
 
 export default function Home() {
-	return <h1>Dashgo</h1>;
+	return (
+		<Flex w="100vw" h="100vh" align="center" justify="center">
+			<Flex
+				as="form"
+				w="100%"
+				maxWidth={360}
+				bg="gray.800"
+				p={8}
+				borderRadius={8}
+				flexDir="column"
+				gap={4}
+			>
+				<FormControl>
+					<FormLabel htmlFor="email">E-mail</FormLabel>
+					<Input
+						id="email"
+						name="email"
+						type="email"
+						focusBorderColor="pink.500"
+						bgColor="gray.900"
+						variant="filled"
+						_hover={{
+							bgColor: "gray.900",
+						}}
+						size="lg"
+					/>
+				</FormControl>
+
+				<FormControl>
+					<FormLabel htmlFor="password">Senha</FormLabel>
+					<Input
+						id="password"
+						name="password"
+						type="password"
+						focusBorderColor="pink.500"
+						bgColor="gray.900"
+						variant="filled"
+						_hover={{
+							bgColor: "gray.900",
+						}}
+						size="lg"
+					/>
+				</FormControl>
+
+				<Button type="submit" colorScheme="pink" size="lg" mt={2}>
+					Entrar
+				</Button>
+			</Flex>
+		</Flex>
+	);
 }
