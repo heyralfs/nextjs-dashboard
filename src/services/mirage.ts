@@ -55,6 +55,7 @@ export function makeServer() {
 			});
 
 			// mirageJS shorthands (see documentation):
+			this.get("/users/:id");
 			this.post("/users");
 
 			this.namespace = "";
